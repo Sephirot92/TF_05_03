@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My page</title>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="stylesheet.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Podstawowe działania matematyczne</a>
+      </div>
+      <button class="btn btn-large btn-primary" id="summarize" type="button" onclick="addingFunction();">
+        Dodaj
+      </button>
+      <button class="btn btn-large btn-primary" id="substraction" type="button" onclick="substractFunction();">
+        Odejmij
+      </button>
+      <button class="btn btn-large btn-primary" id="multiplication" type="button" onclick="multiplicationFunction();">
+        Pomnóż
+      </button>
+      <button class="btn btn-large btn-primary" id="division" type="button" onclick="divideFunction();">
+        Podziel
+      </button>
+      <button class="btn btn-large btn-primary" id="power" type="button" onclick="powerFunction();">
+        Podnieś A do potęgi B
+      </button>
+    </div>
+  </nav>
+
+  <div class="row">
+    <form id="form-numbers">
+      <div id="first-number-header" class="col">
+        Liczba A:
+        <div class="col">
+          <input type="text" id="first_number_input" name="first_number_input" F />
+        </div>
+      </div>
+
+      <div id="second-number-header" class="col">
+        Liczba B:
+        <div class="col">
+          <input type="text" id="second_number_input" name="second_number_input" />
+        </div>
+      </div>
+      <div id="third-number-header" class="col">
+        Wynik:
+        <div class="col">
+          <input type="text" id="third_number_input" name="third_number_input" />
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+<script type="text/javascript">
+  let formValidator;
+
+  const form = $("#form-numbers");
+
+  form.on("submit", (e) => {
+    e.preventDefault();
+
+    if (formValidator && formValidator.errorList.length === 0) {
+      // TODO: add handler to form success
+    }
+  });
+
+  jQuery.validator.addMethod(
+    "notEqual",
+    function (value, element, param) {
+      return this.optional(element) || value != param;
+    },
+    "Please specify a different (non-default) value"
+  );
+</script>
+<script src="./scripts/addingFunction.js"></script>
+<script src="./scripts/substractFunction.js"></script>
+<script src="./scripts/divideFunction.js"></script>
+<script src="./scripts/multiplicationFunction.js"></script>
+<script src="./scripts/powerFunction.js"></script>
+
+<!-- <script type="text/javascript" src="script.js"></script> -->
+
+</html>
