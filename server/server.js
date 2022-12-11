@@ -11,7 +11,6 @@ app.post('/calculateAdd', cors(), (request, response) => {
     if(!Number.isInteger(Number(request.body.numberA)) || !Number.isInteger(Number(request.body.numberB))) {
         response.json({message: 'Błąd danych. Try again'});
     }
-
     response.json({ result: Number(request.body.numberA) + Number(request.body.numberB) });
 })
 
@@ -21,7 +20,6 @@ app.post('/calculateSubstract', cors(), (request, response) => {
     if(!Number.isInteger(Number(request.body.numberA)) || !Number.isInteger(Number(request.body.numberB))) {
         response.json({message: 'Błąd danych. Try again'});
     }
-
     response.json({ result: Number(request.body.numberA) - Number(request.body.numberB) });
 })
 
@@ -31,7 +29,6 @@ app.post('/multiply', cors(), (request, response) => {
     if(!Number.isInteger(Number(request.body.numberA)) || !Number.isInteger(Number(request.body.numberB))) {
         response.json({message: 'Błąd danych. Try again'});
     }
-
     response.json({ result: Number(request.body.numberA) * Number(request.body.numberB) });
 })
 
@@ -41,7 +38,6 @@ app.post('/divide', cors(), (request, response) => {
     if(!Number.isInteger(Number(request.body.numberA)) || !Number.isInteger(Number(request.body.numberB))) {
         response.json({message: 'Błąd danych. Try again'});
     }
-
     response.json({ result: Number(request.body.numberA) / Number(request.body.numberB) });
 })
 
@@ -51,7 +47,6 @@ app.post('/power', cors(), (request, response) => {
     if(!Number.isInteger(Number(request.body.numberA)) || !Number.isInteger(Number(request.body.numberB))) {
         response.json({message: 'Błąd danych. Try again'});
     }
-
     response.json({ result: Math.pow(Number(request.body.numberA), Number(request.body.numberB)) });
 })
 

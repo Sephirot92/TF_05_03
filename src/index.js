@@ -31,8 +31,6 @@ function addingFunction() {
                     result.value = response.message;
                 }
             })
-            
-            
         }
     });
 }
@@ -58,8 +56,6 @@ function substractingFunction() {
                     result.value = response.message;
                 }
             })
-            
-            
         }
     });
 }
@@ -85,8 +81,6 @@ function multiplicationFunction() {
                     result.value = response.message;
                 }
             })
-            
-            
         }
     });
 }
@@ -111,9 +105,7 @@ function divisionFunction() {
                 } else if (key === "message") {
                     result.value = response.message;
                 }
-            })
-            
-            
+            })  
         }
     });
 }
@@ -139,12 +131,8 @@ function powerFunction() {
                     result.value = response.message;
                 }
             })
-            
-            
         }
     });
 }
-
-
 
 document.addEventListener("DOMContentLoaded", init);
