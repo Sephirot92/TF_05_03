@@ -6,11 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My page</title>
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="stylesheet.css" />
+  <script src="index.js"></script>
+  <script src="ajax.service.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -19,19 +17,19 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="#">Podstawowe działania matematyczne</a>
       </div>
-      <button class="btn btn-large btn-primary" id="summarize" type="button" onclick="addingFunction();">
+      <button type="button" id="summarize">
         Dodaj
       </button>
-      <button class="btn btn-large btn-primary" id="substraction" type="button" onclick="substractFunction();">
+      <button class="btn btn-large btn-primary" id="substraction" type="button">
         Odejmij
       </button>
-      <button class="btn btn-large btn-primary" id="multiplication" type="button" onclick="multiplicationFunction();">
+      <button class="btn btn-large btn-primary" id="multiplication" type="button">
         Pomnóż
       </button>
-      <button class="btn btn-large btn-primary" id="division" type="button" onclick="divideFunction();">
+      <button class="btn btn-large btn-primary" id="division" type="button">
         Podziel
       </button>
-      <button class="btn btn-large btn-primary" id="power" type="button" onclick="powerFunction();">
+      <button class="btn btn-large btn-primary" id="power" type="button">
         Podnieś A do potęgi B
       </button>
     </div>
@@ -61,7 +59,7 @@
     </form>
   </div>
 </body>
-
+<!-- 
 <script type="text/javascript">
   let formValidator;
 
@@ -82,12 +80,12 @@
     },
     "Please specify a different (non-default) value"
   );
-</script>
-<script src="./scripts/addingFunction.js"></script>
+</script> -->
+<!-- <script src="./scripts/addingFunction.js"></script>
 <script src="./scripts/substractFunction.js"></script>
 <script src="./scripts/divideFunction.js"></script>
 <script src="./scripts/multiplicationFunction.js"></script>
-<script src="./scripts/powerFunction.js"></script>
+<script src="./scripts/powerFunction.js"></script> -->
 
 <!-- <script type="text/javascript" src="script.js"></script> -->
 
